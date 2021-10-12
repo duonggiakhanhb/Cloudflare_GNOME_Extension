@@ -1,10 +1,10 @@
 {
-    "name" : "Cloudflare",
-    "description" : "Warp Connect",
+    "name": "Cloudflare",
+    "description": "Warp Connect",
     "shell-version": [
         "3.38"
-      ],
-    "url" : "",
+    ],
+    "url": "https://github.com/duonggiakhanhb/Cloudflare_GNOME_Extension",
     "uuid": "cloudflare@adam.gadmz",
-    "author" : "Adam"
+    "author": "Adam"
 }
