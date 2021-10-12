@@ -1,0 +1,10 @@
+{
+    "name" : "Cloudflare",
+    "description" : "Warp Connect",
+    "shell-version": [
+        "3.38"
+      ],
+    "url" : "",
+    "uuid": "cloudflare@adam.gadmz",
+    "author" : "Adam"
+}
