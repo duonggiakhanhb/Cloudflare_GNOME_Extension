@@ -31,14 +31,14 @@ class Cloudflare extends PanelMenu.Button {
       style_class : 'cloud-icons',
     });
     this.add_child(icon);
-    this.connect('button-press-event', () => {
+    this.connect('button-press-event', async () => {
       if(state) {
-        this.warpCommand('warp-cli disconnect')
+        await this.warpCommand('warp-cli disconnect');
         state = false;
         icon.gicon = off;
       }
       else {
-        [ok, out, err, exit] = this.warpCommand('warp-cli connect');
+        await this.warpCommand('warp-cli connect');
         state = true;
         icon.gicon = on;
       }
@@ -46,7 +46,7 @@ class Cloudflare extends PanelMenu.Button {
   }
   warpCommand(commandLine){
     try {
-      var [ok, out, err, exit] =  GLib.spawn_command_line_sync(commandLine);
+      var [ok, out, err, exit] =  GLib.spawn_command_line_async(commandLine);
       return [ok, out, err, exit];
     }
     catch (e){
