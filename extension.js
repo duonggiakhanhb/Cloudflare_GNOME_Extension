@@ -19,7 +19,7 @@ class Cloudflare extends PanelMenu.Button {
     let off = Gio.icon_new_for_string(Me.dir.get_path() + "/icons/off.svg");
     super._init(0);
     try{
-      var [ok, out, err, exit] = this.warpCommand('warp-cli status');
+      var [ok, out, err, exit] = GLib.spawn_command_line_sync('warp-cli status');
     }
     catch(e){
       out = '';
@@ -46,8 +46,7 @@ class Cloudflare extends PanelMenu.Button {
   }
   warpCommand(commandLine){
     try {
-      var [ok, out, err, exit] =  GLib.spawn_command_line_async(commandLine);
-      return [ok, out, err, exit];
+      return GLib.spawn_command_line_async(commandLine);
     }
     catch (e){
       this.installedCheck = false;
