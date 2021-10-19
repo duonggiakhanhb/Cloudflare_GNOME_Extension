@@ -20,9 +20,9 @@ Download [here]
 extract and copy cloudflare@adam.gadmz to `.local/share/gnome-shell`
 
 
-Authors : [authors]
+[Authors] : Adam Nguyen
 
 
 [here]: https://github.com/duonggiakhanhb/Cloudflare_GNOME_Extension/archive/refs/heads/main.zip
 [GNOME extensions]: https://extensions.gnome.org/extension/4542/cloudflare/
-[authors]: https://github.com/duonggiakhanhb
+[Authors]: https://github.com/duonggiakhanhb
